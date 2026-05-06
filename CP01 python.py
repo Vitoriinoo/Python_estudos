@@ -89,12 +89,16 @@ print(f"Soma de todos os números: {sum(lista_numeros)}")
 # Crie um programa em Python que peça números ao usuário e some todos eles.
 # Use o laço while e receba numeros ate que uma condição seja atendida.
 soma_total = 0
-while soma_total < 150:
-    numero = float(input(f"Digite um número para ser adicionado: "))
-    soma_total += numero
-    enfeite = soma_total - 150 
 
-print(f"Condição atendida. A soma final foi: {soma_total}. Isto é {enfeite} a mais do que a condição estabelecida. Parabéns ")
+while True:
+    numero = float(input("Digite um número para ser adicionado (ou -1 para parar): "))
+    
+    if numero == -1:
+        break
+        
+    soma_total += numero
+
+print(f"Condição de parada atendida. A soma final de todos os números válidos foi: {soma_total}.")
 # ==================================== FIM EX06 ====================================
 
 # ====================================== EX07 ======================================
